@@ -1,0 +1,166 @@
+---
+title: "Assignment 2"
+editor: visual
+---
+
+### 1. Running Paul Murrell’s RGraphics basic R programs
+
+#### i. Can you change \`pch\`?
+
+Yes, the pch value can be changed. Here are examples of different symbols used for the values on the scatter plot graph. For example, when the pch value on the graph was 16 the symbol was a filled in circle versus a triangle when it was 17. 
+
+![](images/assignment2(1).png){fig-align="center" width="240"}
+
+![](images/aassignment2(2).png){fig-align="center" width="240"}
+
+#### ii. Try different cex values?
+
+The cex values represents the sizes of the different plotting symbols and making them bigger or smaller. The larger the cex value the larger the plot. Here is an example between using cex value of 2 versus cex value of 8
+
+![](images/Screenshot%202024-10-02%20at%206.42.08%20PM.png){fig-align="center" width="338"}
+
+#### iii. Changing background color
+
+Changed the background color from grey to blue:
+
+Changing the background color of the histogram by replacing col="gray80" with col="lightblue"
+
+![](images/Screenshot%202024-10-02%20at%206.45.39%20PM.png){width="443"}
+
+#### iv. What does the first number in axis() stand for?
+
+The first number in axis stands for which axis we are indicating the program to draw on. 1 indicates the top x-axis, 2 is the left y-axis, 3 is the bottom x-axis, and 4 is the right y-axis.
+
+#### v. Can you generate these charts individually?
+
+Yes these charts can all be generated individually. In order to do this we need to remove the line of code par(mfrow=c(3, 2)) and run each plot by itself.
+
+Example of individual pie chart versus all charts together:\
+\
+![](images/assignments2(6).png){width="272"}![](images/assignments2(7).png){width="288"}
+
+### c. Plotting functions (note: exercise using the happy planet data set
+
+http://happyplanetindex.org)
+
+i\. par()
+
+##### Par is used at beginning of each separate graph inorder to reset the plot settings and produce these results individually 
+
+##### par(mfrow=c(1, 1), mar=c(5, 5, 3, 3))  
+
+\
+ii. lines()
+
+Using lines() to add a line into the HPI vs Life Expectancy graph 
+
+lines(density(cleaned_data\$HPI), col="gray50", lwd=2)
+
+\
+iii. points()
+
+Using points to add different plots or points to both of the scatterplots
+
+points(cleaned_data\$HPI, cleaned_data\$Life_Expectancy_years, pch=16, col=colors, cex=1.2)  \# Points plot
+
+points(cleaned_data\$HPI, cleaned_data\$Carbon_Footprint_tCO2e, pch=21, bg=colors_fp, 
+
+       col="gray30", cex=1.5)  \# Points plot with blue background
+
+\
+iv. axis()
+
+This is used to add a custom or different axis to any of the plots 
+
+axis(1, at=c(0, 5, 10), labels=c("0", "5", "10"))
+
+v\. box()
+
+Using box to add a box around the plots
+
+box(bty="u") 
+
+\
+\
+vi. text()
+
+Text is used to add text annotations to a plot 
+
+text(x=cleaned_data\$HPI\[1\], y=cleaned_data\$Life_Expectancy_years\[1\], 
+
+     labels=cleaned_data\$Country\[1\], pos=4, col="gray50", cex=0.8)  
+
+\
+
+vii\. mtext()
+
+This is used to add margins to different plots 
+
+mtext("First country label", side=3, line=1, cex=1, col="black")  \# Title
+
+viii\. hist()
+
+The hist function is used to create a histogram. Here is the code used to  create our HPI histogram 
+
+hist(cleaned_data\$HPI, breaks=10, col="gray80", main="Histogram of HPI", xlab="HPI", 
+
+     ylab="Frequency", ylim=c(0, max(table(cut(cleaned_data\$HPI, breaks=10)))))
+
+ix\. boxplot()
+
+This is used to create a boxplot. Here is the code used to create a boxplot for life expectancy 
+
+boxplot(cleaned_data\$Life_Expectancy_years \~ cleaned_data\$Continent, 
+
+        main="Life Expectancy by Region", xlab="Region", ylab="Life Expectancy", 
+
+        col="gray90", border="gray50")  \# Boxplot
+
+\
+\
+x. legend()
+
+This is used to add a legend to the plot 
+
+legend("topright", legend=c("Data Points"), pch=16, col="gray30") 
+
+\
+xi. persp()
+
+The function persp is used to  create a 3D perspective plot
+
+persp(x, y, z, theta = 30, phi = 30, expand = 0.5, 
+
+      col = "lightblue", border = "gray50", ltheta = 50, 
+
+      shade = 0.5, xlab = "X-axis", ylab = "Y-axis", zlab = "Z-axis")
+
+xii\. names()
+
+This function is used to set names for different columns 
+
+names(cleaned_data) \<- gsub(" ", "\_", names(cleaned_data)) 
+
+\
+
+xiii\. pie()
+
+The function pie is used to create a pie chart. Here, a pie chart is being used to observe the top five countries by ecological footprint 
+
+### d. Post your works on your blog/website
+
+Below are the plots produced using the all countries sheet from the happy planet dataset.
+
+![](images/HPI1.png){width="375"}
+
+![](images/HPI2.png){width="416"}
+
+![](images/HPI3.png){width="427"}
+
+![](images/HPI4.png){width="465"}
+
+![](images/HPI5.png){width="483"}
+
+![](images/HPI6.png){width="508"}
+
+![](images/HPI7.png){width="439"}
