@@ -1,0 +1,6 @@
+---
+title: "Home"
+author: "Malawika Gopinath"
+format: html
+---
+Hello, I’m Mala! Welcome to my website.
