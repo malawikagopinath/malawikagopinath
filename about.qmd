@@ -1,8 +1,0 @@
----
-title: "About Me"
-format: html
----
-
-This page contains information about me.
-
-------------------------------------------------------------------------
