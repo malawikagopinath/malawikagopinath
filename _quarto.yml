@@ -13,5 +13,7 @@ website:
         menu:
           - text: "Assignment 1"
             href: Assignment 1.qmd
+          - text: "Assignment 2"
+            href: Assignment 2.qmd
        
 
