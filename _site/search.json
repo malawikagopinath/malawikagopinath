@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "assignment1.html",
+    "href": "assignment1.html",
+    "title": "assignment1",
+    "section": "",
+    "text": "| Graph 1 | Graph 2 |\n|———|———|\n| ![Graph 1](quarto_page_files/figure-html/anscombe1.png) | ![Graph 2](quarto_page_files/figure-html/anscombe2.png) |\n| ![Graph 3](quarto_page_files/figure-html/anscombe3.png) | ![Graph 4](quarto_page_files/figure-html/anscombe4.png) |\n\n\n![Anscombe 5](quarto_page_files/figure-html/anscombe5.png)"
+  },
+  {
+    "objectID": "assignment1.html#anscombes-examples",
+    "href": "assignment1.html#anscombes-examples",
+    "title": "assignment1",
+    "section": "",
+    "text": "| Graph 1 | Graph 2 |\n|———|———|\n| ![Graph 1](quarto_page_files/figure-html/anscombe1.png) | ![Graph 2](quarto_page_files/figure-html/anscombe2.png) |\n| ![Graph 3](quarto_page_files/figure-html/anscombe3.png) | ![Graph 4](quarto_page_files/figure-html/anscombe4.png) |\n\n\n![Anscombe 5](quarto_page_files/figure-html/anscombe5.png)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Malawika Gopinath and I am a graduate student in the Social Data Analytics and Research program at The University of Texas at Dallas, where I also earned my undergraduate degree in Finance and Economics\n\n\n\n\n\nMy professional is characterized by roles that include a combination of analytical and problem-solving skills. Through my experience I have developed a techincal skill set, including proficiency in Excel, SQL, Python, R-Studio, Stata, and ArcGIS Pro. My roles have involved creating interactive visualizations, improving financial processes, and providing actionable insights that support strategic business decisions."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Introduction\nHi my name is Malawika Gopinath, welcome to my website!\nThis website is a comprehensive showcase of my work and assignments for the EPPS 6356 - Data Visualizations course, taught by Dr. Karl Ho at The University of Texas at Dallas.\n\nContact\nEmail: Malawika.Gopinath@UTDallas.edu\nLinkedin : https://www.linkedin.com/in/malawika-gopinath/"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "1. Running Paul Murrell’s RGraphics basic R programs\n\ni. Can you change `pch`?\nYes, the pch value can be changed. Here are examples of different symbols used for the values on the scatter plot graph. For example, when the pch value on the graph was 16 the symbol was a filled in circle versus a triangle when it was 17. \n\n\nii. Try different cex values?\nThe cex values represents the sizes of the different plotting symbols and making them bigger or smaller. The larger the cex value the larger the plot. Here is an example between using cex value of 2 versus cex value of 8\n\n\niii. Changing background color\nChanged the background color from grey to blue:\nChanging the background color of the histogram by replacing col=“gray80” with col=“lightblue”iv. What does the first number in axis() stand for?\nThe first number in axis stands for which axis we are indicating the program to draw on. 1 indicates the top x-axis, 2 is the left y-axis, 3 is the bottom x-axis, and 4 is the right y-axis.\n\n\nv. Can you generate these charts individually?\nYes these charts can all be generated individually. In order to do this we need to remove the line of code par(mfrow=c(3, 2)) and run each plot by itself.\nExample of individual pie chart versus all charts together:\n\n\n\n\n\nc. Plotting functions (note: exercise using the happy planet data set\nhttp://happyplanetindex.org)\ni. par()\n\nPar is used at beginning of each separate graph inorder to reset the plot settings and produce these results individually\n\n\npar(mfrow=c(1, 1), mar=c(5, 5, 3, 3))\n\nii. lines()\nUsing lines() to add a line into the HPI vs Life Expectancy graph \nlines(density(cleaned_data$HPI), col=“gray50”, lwd=2)\n\niii. points()\nUsing points to add different plots or points to both of the scatterplots\npoints(cleaned_data$HPI, cleaned_data$Life_Expectancy_years, pch=16, col=colors, cex=1.2)  # Points plot\npoints(cleaned_data$HPI, cleaned_data$Carbon_Footprint_tCO2e, pch=21, bg=colors_fp, \n       col=“gray30”, cex=1.5)  # Points plot with blue background\n\niv. axis()\nThis is used to add a custom or different axis to any of the plots \naxis(1, at=c(0, 5, 10), labels=c(“0”, “5”, “10”))\nv. box()\nUsing box to add a box around the plots\nbox(bty=“u”) \n\n\nvi. text()\nText is used to add text annotations to a plot \ntext(x=cleaned_data$HPI[1], y=cleaned_data$Life_Expectancy_years[1], \n     labels=cleaned_data$Country[1], pos=4, col=“gray50”, cex=0.8)  \nvii. mtext()\nThis is used to add margins to different plots \nmtext(“First country label”, side=3, line=1, cex=1, col=“black”)  # Title\nviii. hist()\nThe hist function is used to create a histogram. Here is the code used to  create our HPI histogram \nhist(cleaned_data$HPI, breaks=10, col=“gray80”, main=“Histogram of HPI”, xlab=“HPI”, \n     ylab=“Frequency”, ylim=c(0, max(table(cut(cleaned_data$HPI, breaks=10)))))\nix. boxplot()\nThis is used to create a boxplot. Here is the code used to create a boxplot for life expectancy \nboxplot(cleaned_data$Life_Expectancy_years ~ cleaned_data$Continent, \n        main=“Life Expectancy by Region”, xlab=“Region”, ylab=“Life Expectancy”, \n        col=“gray90”, border=“gray50”)  # Boxplot\n\n\nx. legend()\nThis is used to add a legend to the plot \nlegend(“topright”, legend=c(“Data Points”), pch=16, col=“gray30”) \n\nxi. persp()\nThe function persp is used to  create a 3D perspective plot\npersp(x, y, z, theta = 30, phi = 30, expand = 0.5, \n      col = “lightblue”, border = “gray50”, ltheta = 50, \n      shade = 0.5, xlab = “X-axis”, ylab = “Y-axis”, zlab = “Z-axis”)\nxii. names()\nThis function is used to set names for different columns \nnames(cleaned_data) &lt;- gsub(” “,”_“, names(cleaned_data)) \nxiii. pie()\nThe function pie is used to create a pie chart. Here, a pie chart is being used to observe the top five countries by ecological footprint \n\n\n\nd. Post your works on your blog/website\nBelow are the plots produced using the all countries sheet from the happy planet dataset."
+  },
+  {
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "Assignment 5",
+    "section": "",
+    "text": "a. Histogram\ndata &lt;- rnorm(100)\nhist(data, col=\"lightblue\", border=\"black\", main=\"Histogram\", xlab=\"Values\", ylab=\"Frequency\", \n     breaks=10, las=1, font.main=2, cex.lab=1.2)\n\n\n\n\n\nb. Vertical Barchart\ncategories &lt;- c(\"A\", \"B\", \"C\", \"D\")\nvalues &lt;- c(4, 7, 9, 3)\nbarplot(values, names.arg=categories, col=\"lightblue\", main=\"Vertical Bar Chart\", \n        ylab=\"Count\", xlab=\"Categories\", border=\"black\", las=1, cex.names=1.2)\n\n\n\n\n\ni. Horizontal Barchart\nbarplot(values, names.arg=categories, col=\"lightblue\", horiz=TRUE, main=\"Horizontal Bar Chart\",           xlab=\"Count\", border=\"black\", las=1, cex.names=1.2)\n\n\n\n\n\nc. Piechart\npie(values, labels=categories, col=c(\"lightblue\", \"lightgreen\", \"lightpink\", \"lightyellow\"), \n    main=\"Pie Chart\", radius=1, border=\"black\")\n\n\n\n\n\nd. Boxplot\n\nboxplot_data &lt;- list(Group1=rnorm(50), Group2=rnorm(50, mean=3), Group3=rnorm(50, mean=6))\nboxplot(boxplot_data, col=c(\"lightblue\", \"lightgreen\", \"lightpink\"), main=\"Boxplot\", \n        ylab=\"Values\", border=\"darkblue\", las=1, font.lab=2, cex.lab=1.2)\n\n\n\n\n\ne. Scatterplot\nx &lt;- rnorm(50)\ny &lt;- x + rnorm(50, sd=0.5)\nplot(x, y, main=\"Scatterplot\", xlab=\"X Axis\", ylab=\"Y Axis\", pch=19, col=\"darkblue\", \n     cex=1.5, font.main=2, cex.lab=1.2, col.axis=\"black\", las=1)"
+  },
+  {
+    "objectID": "assignment5.html#using-sample-datasets-or-own-data-create-the-following-charts-using-only-r-graphics-functions-i.e.-without-using-any-other-packages.-be-sure-you-customize-the-chart-with-your-own-styletheme-e.g.-font-color-pch-etc.",
+    "href": "assignment5.html#using-sample-datasets-or-own-data-create-the-following-charts-using-only-r-graphics-functions-i.e.-without-using-any-other-packages.-be-sure-you-customize-the-chart-with-your-own-styletheme-e.g.-font-color-pch-etc.",
+    "title": "Assignment 5",
+    "section": "",
+    "text": "a. Histogram\ndata &lt;- rnorm(100)\nhist(data, col=\"lightblue\", border=\"black\", main=\"Histogram\", xlab=\"Values\", ylab=\"Frequency\", \n     breaks=10, las=1, font.main=2, cex.lab=1.2)\n\n\n\n\n\nb. Vertical Barchart\ncategories &lt;- c(\"A\", \"B\", \"C\", \"D\")\nvalues &lt;- c(4, 7, 9, 3)\nbarplot(values, names.arg=categories, col=\"lightblue\", main=\"Vertical Bar Chart\", \n        ylab=\"Count\", xlab=\"Categories\", border=\"black\", las=1, cex.names=1.2)\n\n\n\n\n\ni. Horizontal Barchart\nbarplot(values, names.arg=categories, col=\"lightblue\", horiz=TRUE, main=\"Horizontal Bar Chart\",           xlab=\"Count\", border=\"black\", las=1, cex.names=1.2)\n\n\n\n\n\nc. Piechart\npie(values, labels=categories, col=c(\"lightblue\", \"lightgreen\", \"lightpink\", \"lightyellow\"), \n    main=\"Pie Chart\", radius=1, border=\"black\")\n\n\n\n\n\nd. Boxplot\n\nboxplot_data &lt;- list(Group1=rnorm(50), Group2=rnorm(50, mean=3), Group3=rnorm(50, mean=6))\nboxplot(boxplot_data, col=c(\"lightblue\", \"lightgreen\", \"lightpink\"), main=\"Boxplot\", \n        ylab=\"Values\", border=\"darkblue\", las=1, font.lab=2, cex.lab=1.2)\n\n\n\n\n\ne. Scatterplot\nx &lt;- rnorm(50)\ny &lt;- x + rnorm(50, sd=0.5)\nplot(x, y, main=\"Scatterplot\", xlab=\"X Axis\", ylab=\"Y Axis\", pch=19, col=\"darkblue\", \n     cex=1.5, font.main=2, cex.lab=1.2, col.axis=\"black\", las=1)"
+  },
+  {
+    "objectID": "assignment4.html#generate-a-program-to-create-a-chart-using-either-r-graphics-or-ggplot2-or-any-r-packages",
+    "href": "assignment4.html#generate-a-program-to-create-a-chart-using-either-r-graphics-or-ggplot2-or-any-r-packages",
+    "title": "Assignment 4",
+    "section": "Generate a program to create a chart using either R Graphics or ggplot2 or any R packages",
+    "text": "Generate a program to create a chart using either R Graphics or ggplot2 or any R packages\na. Variable Width Column Chart\ndata &lt;- data.frame(\n  category = c(\"A\", \"B\", \"C\", \"D\"),\n  value = c(3, 5, 2, 8),\n  width = c(1, 2, 3, 4)\n)\n\n# Variable Width Column Chart\nggplot(data, aes(x = category, y = value, width = width)) +\n  geom_col(fill = \"skyblue\", position = position_identity(), color = \"black\") +\n  theme_minimal() +\n  labs(title = \"Variable Width Column Chart\",\n       x = \"Category\",\n       y = \"Value\") +\n  theme(legend.position = \"none\")\n\n\n\n\n\nb. Table or Tables with embedded charts\nggplot(data, aes(x = category, y = value)) +\n  geom_point(aes(size = value), shape = 21, fill = \"skyblue\") +\n  geom_text(aes(label = value), vjust = -0.5, size = 4) +\n  theme_minimal() +\n  theme(axis.title.x = element_blank(), axis.title.y = element_blank(),\n        axis.text.y = element_blank(), axis.ticks.y = element_blank()) +\n  labs(title = \"Table with Embedded Charts\")\n\n\n\n\n\nc. Bar Chart\nggplot(data, aes(x = category, y = value)) +\n  geom_bar(stat = \"identity\", fill = \"skyblue\") +\n  theme_minimal() +\n  labs(title = \"Barplot\", x = \"Category\", y = \"Value\")\n\n\n\n\n\nd. Column Chart\nggplot(data, aes(x = category, y = value)) +\n  geom_bar(stat = \"identity\", fill = \"skyblue\") +\n  coord_flip() +\n  theme_minimal() +\n  labs(title = \"Horizontal Barplot\", x = \"Value\", y = \"Category\")"
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "a. Choose one of the six charts and explain how it is configured by adding documentation to the codes.\nThe chart selected was the Barplot, below is the code for the graph. \n# Barplot \npar(mar=c(2, 3.1, 2, 2.1))   # This is used to set the margins of the plot and make sure each plot is produced individually. \nmidpts &lt;- barplot(VADeaths,  # This is to create the barplot for the VADeaths Dataframe\ncol=gray(0.1 + seq(1, 9, 2)/11), # This is to specify which color to use - here we are using gray\n names=rep(““, 4)) \nmtext(sub(” “,”\\n”, colnames(VADeaths)), # This adds texts to margins\nat=midpts, side=1, line=0.5, cex=0.5) #  This indicates the positions, axis, margins, and size\ntext(rep(midpts, each=5), apply(VADeaths, 2, cumsum) - VADeaths/2,  # This adds labels to the bars in the bar plot and ‘rep’ repeats the middle point each 5 times \nVADeaths,  # test to be displayed\ncol=rep(c(“white”, “black”), times=3:2),  # color of the text\ncex=0.8) # size of the text\n par(mar=c(5.1, 4.1, 4.1, 2.1))   # This resets the margins to the default after the plot has been created"
+  },
+  {
+    "objectID": "assignment3.html#section",
+    "href": "assignment3.html#section",
+    "title": "assignment3",
+    "section": "",
+    "text": "— title: “Assignment 3” format: html editor: visual —"
+  },
+  {
+    "objectID": "assignment3.html#rerun-murrell01.r",
+    "href": "assignment3.html#rerun-murrell01.r",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "a. Choose one of the six charts and explain how it is configured by adding documentation to the codes.\nThe chart selected was the Barplot, below is the code for the graph. \n# Barplot \npar(mar=c(2, 3.1, 2, 2.1))   # This is used to set the margins of the plot and make sure each plot is produced individually. \nmidpts &lt;- barplot(VADeaths,  # This is to create the barplot for the VADeaths Dataframe\ncol=gray(0.1 + seq(1, 9, 2)/11), # This is to specify which color to use - here we are using gray\n names=rep(““, 4)) \nmtext(sub(” “,”\\n”, colnames(VADeaths)), # This adds texts to margins\nat=midpts, side=1, line=0.5, cex=0.5) #  This indicates the positions, axis, margins, and size\ntext(rep(midpts, each=5), apply(VADeaths, 2, cumsum) - VADeaths/2,  # This adds labels to the bars in the bar plot and ‘rep’ repeats the middle point each 5 times \nVADeaths,  # test to be displayed\ncol=rep(c(“white”, “black”), times=3:2),  # color of the text\ncex=0.8) # size of the text\n par(mar=c(5.1, 4.1, 4.1, 2.1))   # This resets the margins to the default after the plot has been created"
+  },
+  {
+    "objectID": "assignment3.html#rerun-anscombe01.r-in-teams-folder",
+    "href": "assignment3.html#rerun-anscombe01.r-in-teams-folder",
+    "title": "Assignment 3",
+    "section": "2. Rerun anscombe01.R (in Teams folder)",
+    "text": "2. Rerun anscombe01.R (in Teams folder)\na. Compare the regression models\nBased on the regression model analysis, the four models in Anscombe have similar characteristics with almost similar intercepts and slopes, as well as consistent residual errors. The F-test values also indicate a strong positive significance. All the models also have a p test value that is below 0.01, further indicating the significance of the models and thus indicating a close fit to the data.\nHowever, despite how similar these datasets are we notice very different graphical representations for each of them. This further highlights the importance of different datasets and understanding how to best visually represent each of them and emphasizes the need for careful observation and analysis. \nb. Compare different ways to create the plots (e.g. changing colors, line types, plot characters)\nHere we can see three different ways to create the plots. The first being the original, the second is with changing the colors, and this is changing the plotting character to an ‘x’. The symbol ‘x’ when used on these plots do not stand out as much as the original filled circle, the red also makes it dull compared to the orange filled circles used in the original plots. The graph line being blue like the original also stands out more than changing it to red. \n\n3. Can you finetune the charts without using other packages (consult RGraphics by Murrell)?\nYes these charts can be fine tuned to use a serif font, try non-default colors, and use own plotting characters without installing other packages. \n\na. Use a serif font\nSerif font or any other fonts can be inserted like so \npar(family = “serif”)\n\nb. Try non-default colors\nNon-default colors can be implemented using the ‘col=’ can be used. Hex codes for colors can be inserted.\nplot(pressure, pch=16, col=“#FF5733”, bg=“#D1E231”)  # custom point color and background color\ntext(150, 600, “Pressure (mm Hg)\\nversus\\nTemperature (Celsius)”,\ncol=“forestgreen”, cex=1.2)  # Custom color for the text\nc. Use own plotting character\nPch can be used to customize plotting characters. The pch values range from 0 to 25. For example pch =19 would be filled circles as the plotting character and pch = 24 would be upward filled triangles.\nplot(pressure, pch=24, col=“red”, bg=“yellow”, cex=1.5) # Use upward-pointing triangle with custom fill color text(150, 600, “Pressure (mm Hg)\\nversus\\nTemperature (Celsius)”, col=“green”, cex=1.2, family=“serif”)\n\n4. How about with ggplot2? (use tidyverse package)\nYes, the charts can be finetuned. Overall the usage of ggplot simplifies the graphics. It allows for a wider range of complex but visually informative graphs to be created. Here is the histogram and boxplot from murrel using ggplot. We can see a clear distinction between the data making it easier to understand."
+  },
+  {
+    "objectID": "assignment6.html",
+    "href": "assignment6.html",
+    "title": "Assignment 6",
+    "section": "",
+    "text": "i) Yes you can change the font of the program\nii) The font can be changed by replacing the font-family. For example, when changing to Times New Roman it can be replaced as such\nfont-family: ‘Times New Roman’, serif;"
+  },
+  {
+    "objectID": "assignment6.html#a.-run-the-sample-shiny-programs-in-teams-folder",
+    "href": "assignment6.html#a.-run-the-sample-shiny-programs-in-teams-folder",
+    "title": "Assignment 6",
+    "section": "",
+    "text": "i) Yes you can change the font of the program\nii) The font can be changed by replacing the font-family. For example, when changing to Times New Roman it can be replaced as such\nfont-family: ‘Times New Roman’, serif;"
+  },
+  {
+    "objectID": "assignment6.html#b.-build-a-shiny-app-using-the-following-datasets-in-datasets-library",
+    "href": "assignment6.html#b.-build-a-shiny-app-using-the-following-datasets-in-datasets-library",
+    "title": "Assignment 6",
+    "section": "b. Build a Shiny app using the following datasets (in datasets library):",
+    "text": "b. Build a Shiny app using the following datasets (in datasets library):\ni. mtcars\nScatterplots from the mtcars dataset that show the relationship between mpg and other variables in the dataset.\nhttps://malawikagopinath.shinyapps.io/mtcars/\nii. USArrests\nA heatmap representing USArrests and crime rates across different states\nhttps://malawikagopinath.shinyapps.io/usaarrests/\niii. uspop\nA graph to show USA population growth over time between years 1900-1979 available in the dataset\nhttps://malawikagopinath.shinyapps.io/usapop/"
+  },
+  {
+    "objectID": "assignment6.html#c-build-a-shiny-app-loaded-with-your-own-data-sets",
+    "href": "assignment6.html#c-build-a-shiny-app-loaded-with-your-own-data-sets",
+    "title": "Assignment 6",
+    "section": "c ) Build a Shiny app loaded with your own data sets",
+    "text": "c ) Build a Shiny app loaded with your own data sets\nThis app using a dataset of products from the sephora website, their brands, prices, and links to create a product catalog. This data was extracted using the sephora API to use for a project in my EPPS 6317 class.\nhttps://malashiny.shinyapps.io/sephoradataset/"
+  },
+  {
+    "objectID": "assignment1.html#section",
+    "href": "assignment1.html#section",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Google “generative art”. Cite some examples\n\na) Generative art by Anders Hoff\n\n\n\n\n\nHoff, A. (n.d.). The importance of Generative Art. Tyler Hobbs. https://www.tylerxhobbs.com/words/the-importance-of-generative-art\nb) Sprawl, by Mark J. Stock\n\n\n\n\n\nStock, J Mary. (n.d.). The importance of Generative Art. Tyler Hobbs. https://www.tylerxhobbs.com/words/the-importance-of-generative-art"
+  },
+  {
+    "objectID": "assignment1.html#fall-art",
+    "href": "assignment1.html#fall-art",
+    "title": "Assignment 1",
+    "section": "3. Fall Art",
+    "text": "3. Fall Art\nChanged burlywood to “#772f1a” to change the colors of the fall art"
+  },
+  {
+    "objectID": "assignment1.html#write-a-critique-on-a-chart-in-published-work-bookarticlenews-website",
+    "href": "assignment1.html#write-a-critique-on-a-chart-in-published-work-bookarticlenews-website",
+    "title": "Assignment 1",
+    "section": "4) Write a critique on a chart in published work (book/article/news website)",
+    "text": "4) Write a critique on a chart in published work (book/article/news website)"
+  },
+  {
+    "objectID": "assignment1.html#hint-learn-from-nathan-yaus-example-discussed-in-class.-post-on-your-website.",
+    "href": "assignment1.html#hint-learn-from-nathan-yaus-example-discussed-in-class.-post-on-your-website.",
+    "title": "Assignment 1",
+    "section": "(Hint: Learn from Nathan Yau’s example discussed in class). Post on your website.",
+    "text": "(Hint: Learn from Nathan Yau’s example discussed in class). Post on your website.\n\nThe above visual shows the performance differences in runners who switch to new shoes, focusing on the Nike Vaporfly model which is highlighted from the rest of the shows through a red indicator. While the red mark draws in the attention of the reader, the chart could benefit from more labels. It would be interesting to see interactive labels when you hover over the other dots that highlight the other brands mentioned in the study. Additionally, the usage of different colors would be helpful, different brands could be under one color. For example, all Nike shoes blue ( excluding Vaporflys) and all Adidas pink."
+  },
+  {
+    "objectID": "assignment7.html",
+    "href": "assignment7.html",
+    "title": "assignment7",
+    "section": "",
+    "text": "Build a Shiny app that displays charts 9, 18 in the Thought Starter and one additional chart of your team’s choice, with reactive and/or interactive elements. You can use any dataset but must cite the source\n\nThe following app used the mtcars dataset to make an interactive chart of a scatter chart, bubble chart, and a line chart"
+  },
+  {
+    "objectID": "assignment7.html#section",
+    "href": "assignment7.html#section",
+    "title": "assignment7",
+    "section": "",
+    "text": "Build a Shiny app that displays charts 9, 18 in the Thought Starter and one additional chart of your team’s choice, with reactive and/or interactive elements. You can use any dataset but must cite the source\n\nThe following app used the mtcars dataset to make an interactive chart of a scatter chart, bubble chart, and a line chart"
+  },
+  {
+    "objectID": "assignment8.html",
+    "href": "assignment8.html",
+    "title": "Assignment 8",
+    "section": "",
+    "text": "Final Presentation\n\nShiny Application\nThis app is designed to analyze and visualize the relationship between walkability and depression rates across Dallas, Austin, and Houston. It integrates data from the national walkability indexes and mental health statistics as well. User can select which graph they want to view through the dropdown.\nhttps://malashiny.shinyapps.io/test-1/\n\n\nPDF\nDownload the document\n\n\n\nCode\nDownload the R script"
+  },
+  {
+    "objectID": "assignment7.html#shiny-application",
+    "href": "assignment7.html#shiny-application",
+    "title": "Assignment 7",
+    "section": "Shiny Application",
+    "text": "Shiny Application\nBuild a Shiny app that displays charts 9, 18 in the Thought Starter and one additional chart of your team’s choice, with reactive and/or interactive elements. You can use any dataset but must cite the source\nThe following app used the mtcars dataset to make an interactive chart of a scatter chart, bubble chart, and a line chart\nhttps://malawikagopinath.shinyapps.io/shiny_hw_7/"
+  }
+]
