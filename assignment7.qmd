@@ -1,0 +1,15 @@
+---
+title: "Assignment 7"
+format: html
+editor: visual
+---
+
+## 
+
+## Shiny Application
+
+Build a Shiny app that displays charts 9, 18 in the Thought Starter and one additional chart of your team’s choice, with reactive and/or interactive elements. You can use any dataset but must cite the source
+
+The following app used the mtcars dataset to make an interactive chart of a scatter chart, bubble chart, and a line chart
+
+<https://malawikagopinath.shinyapps.io/shiny_hw_7/>

@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+My name is Malawika Gopinath and I am a graduate student in the Social Data Analytics and Research program at The University of Texas at Dallas, where I also earned my undergraduate degree in Finance and Economics
+
+![](images/NWO03782-02.JPEG){fig-align="center" width="195"}
+
+My professional is characterized by roles that include a combination of analytical and problem-solving skills. Through my experience I have developed a techincal skill set, including proficiency in Excel, SQL, Python, R-Studio, Stata, and ArcGIS Pro. My roles have involved creating interactive visualizations, improving financial processes, and providing actionable insights that support strategic business decisions.

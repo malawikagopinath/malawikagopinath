@@ -1,0 +1,44 @@
+---
+title: "Assignment 1"
+format: html
+editor: visual
+---
+
+## 1.  \*\*Anscombe's Examples\*\*
+
+\
+\
+
+![](images/anscombe5.jpg){fig-align="center" width="359"}
+
+## 
+
+2.  Google “generative art”. Cite some examples
+
+a\) **Generative art by Anders Hoff**
+
+![](images/generatedart1.jpg){fig-align="center" width="255"}
+
+Hoff, A. (n.d.). *The importance of Generative Art*. Tyler Hobbs. https://www.tylerxhobbs.com/words/the-importance-of-generative-art
+
+b\) **Sprawl, by Mark J. Stock**
+
+![](images/generatedart2.jpeg){fig-align="center" width="282"}
+
+Stock, J Mary. (n.d.). *The importance of Generative Art*. Tyler Hobbs. https://www.tylerxhobbs.com/words/the-importance-of-generative-art
+
+## 3. Fall Art
+
+Changed burlywood to "#772f1a" to change the colors of the fall art
+
+![](images/fallartsy.png){fig-align="center" width="378"}
+
+![](images/fallart2.png){fig-align="center" width="403"}
+
+## 4) Write a critique on a chart in published work (book/article/news website)
+
+## (Hint: Learn from Nathan Yau’s example discussed in class). Post on your website.
+
+![](images/vaporfly.png)
+
+The above visual shows the performance differences in runners who switch to new shoes, focusing on the Nike Vaporfly model which is highlighted from the rest of the shows through a red indicator. While the red mark draws in the attention of the reader, the chart could benefit from more labels. It would be interesting to see interactive labels when you hover over the other dots that highlight the other brands mentioned in the study. Additionally, the usage of different colors would be helpful, different brands could be under one color. For example, all Nike shoes blue ( excluding Vaporflys) and all Adidas pink.

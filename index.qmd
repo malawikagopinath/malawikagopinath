@@ -1,0 +1,17 @@
+---
+title: "Home"
+format: html
+editor: visual
+---
+
+### Introduction
+
+Hi my name is Malawika Gopinath, welcome to my website!
+
+This website is a comprehensive showcase of my work and assignments for the EPPS 6356 - Data Visualizations course, taught by Dr. Karl Ho at The University of Texas at Dallas.
+
+#### Contact
+
+Email: Malawika.Gopinath\@UTDallas.edu
+
+Linkedin : <https://www.linkedin.com/in/malawika-gopinath/>

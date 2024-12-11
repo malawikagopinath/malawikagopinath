@@ -1,0 +1,39 @@
+---
+title: "Assignment 6"
+format: html
+editor: visual
+---
+
+## a. Run the sample Shiny programs in Teams folder
+
+i\) Yes you can change the font of the program
+
+ii\) The font can be changed by replacing the font-family. For example, when changing to Times New Roman it can be replaced as such
+
+font-family: 'Times New Roman', serif;
+
+## **b. Build a Shiny app using the following datasets (in datasets library):**
+
+i\. mtcars
+
+Scatterplots from the mtcars dataset that show the relationship between mpg and other variables in the dataset.
+
+<https://malawikagopinath.shinyapps.io/mtcars/>
+
+ii\. USArrests
+
+A heatmap representing USArrests and crime rates across different states
+
+<https://malawikagopinath.shinyapps.io/usaarrests/>
+
+iii\. uspop
+
+A graph to show USA population growth over time between years 1900-1979 available in the dataset
+
+<https://malawikagopinath.shinyapps.io/usapop/>
+
+## c ) Build a Shiny app loaded with your own data sets
+
+This app using a dataset of products from the sephora website, their brands, prices, and links to create a product catalog. This data was extracted using the sephora API to use for a project in my EPPS 6317 class.
+
+<https://malashiny.shinyapps.io/sephoradataset/>

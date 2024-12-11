@@ -1,0 +1,27 @@
+---
+title: "Assignment 8"
+format: html
+editor: visual
+---
+
+# Final Presentation
+
+### Shiny Application
+
+This app is designed to analyze and visualize the relationship between walkability and depression rates across Dallas, Austin, and Houston. It integrates data from the national walkability indexes and mental health statistics as well. User can select which graph they want to view through the dropdown.
+
+<https://malashiny.shinyapps.io/test-1/>
+
+### PDF
+
+[Download the document](./TEST/EPPS6356FinalProject.pdf)
+
+```         
+
+```
+
+### Code
+
+This code was edited and adapted with the assistance of AI to improve its functionality and effectiveness.
+
+[Download the R script](./TEST/app.R)
