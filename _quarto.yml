@@ -1,0 +1,36 @@
+project:
+  type: website
+
+website:
+  title: "Mala's Website"
+  navbar:
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Assignments"
+        menu:
+          - text: "Assignment 1"
+            href: assignment1.qmd 
+          - text: "Assignment 2"
+            href: assignment2.qmd 
+          - text: "Assignment 3"
+            href: assignment3.qmd 
+          - text: "Assignment 4"
+            href: assignment4.qmd 
+          - text: "Assignment 5"
+            href: assignment5.qmd
+          - text: "Assignment 6"
+            href: assignment6.qmd 
+          - text: "Assignment 7"
+            href: assignment7.qmd 
+          - text: "Assignment 8"
+            href: assignment8.qmd 
+            
+
+
+
+
+
+
